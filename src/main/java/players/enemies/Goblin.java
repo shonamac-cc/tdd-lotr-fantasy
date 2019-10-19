@@ -1,7 +1,8 @@
 package players.enemies;
 
 public class Goblin extends Enemy {
-    public Goblin(int hPoints) {
-        super(hPoints);
+
+    public Goblin(String name, int hPoints) {
+        super(name, hPoints);
     }
 }
