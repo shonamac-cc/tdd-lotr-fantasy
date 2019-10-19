@@ -11,10 +11,19 @@ public class Sword implements IWeapon {
     public Sword(){
         this.damagePoints = 15;
         this.name = "Sting";
-        this.sound = "schwing";
+        this.sound = "Schwing";
     }
 
     public int attack() {
         return this.damagePoints;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSound() {
+        return sound;
+    }
+
 }
