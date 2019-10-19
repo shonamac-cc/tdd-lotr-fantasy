@@ -14,7 +14,7 @@ public class Axe implements IWeapon {
         this.sound = "chop";
     }
 
-    public String attack() {
-        return "I attack with an Axe ";
+    public int attack() {
+        return this.damagePoints;
     }
 }

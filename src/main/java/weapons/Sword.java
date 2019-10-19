@@ -13,7 +13,8 @@ public class Sword implements IWeapon {
         this.name = "Sting";
         this.sound = "schwing";
     }
-    public String attack() {
-        return "I attack with a sword ";
+
+    public int attack() {
+        return this.damagePoints;
     }
 }

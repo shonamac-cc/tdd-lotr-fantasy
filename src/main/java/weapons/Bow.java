@@ -13,7 +13,8 @@ public class Bow implements IWeapon {
         this.name = "Galadhrim";
         this.sound = "twang";
     }
-    public String attack() {
-        return "I attack with a bow ";
+
+    public int attack() {
+        return this.damagePoints;
     }
 }
