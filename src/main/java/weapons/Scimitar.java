@@ -8,7 +8,7 @@ public class Scimitar implements IWeapon {
     private String name;
     private String sound;
 
-    public Sword(){
+    public Scimitar(){
         this.damagePoints = 3;
         this.name = "Scimitar";
         this.sound = "Clang";
@@ -16,5 +16,13 @@ public class Scimitar implements IWeapon {
 
     public int attack() {
         return this.damagePoints;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSound() {
+        return sound;
     }
 }

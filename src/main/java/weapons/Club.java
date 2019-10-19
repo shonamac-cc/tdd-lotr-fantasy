@@ -8,7 +8,7 @@ public class Club implements IWeapon {
     private String name;
     private String sound;
 
-    public Sword(){
+    public Club(){
         this.damagePoints = 8;
         this.name = "Club";
         this.sound = "Whack";
@@ -16,5 +16,13 @@ public class Club implements IWeapon {
 
     public int attack() {
         return this.damagePoints;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSound() {
+        return sound;
     }
 }

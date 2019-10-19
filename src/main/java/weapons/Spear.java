@@ -8,7 +8,7 @@ public class Spear implements IWeapon {
     private String name;
     private String sound;
 
-    public Sword(){
+    public Spear(){
         this.damagePoints = 11;
         this.name = "Spear";
         this.sound = "Hong";
@@ -16,5 +16,13 @@ public class Spear implements IWeapon {
 
     public int attack() {
         return this.damagePoints;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSound() {
+        return sound;
     }
 }
