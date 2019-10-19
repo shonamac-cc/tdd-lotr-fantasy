@@ -2,27 +2,14 @@ package weapons;
 
 import behaviours.IWeapon;
 
-public class Scimitar implements IWeapon {
+public class Scimitar extends Weapon implements IWeapon {
 
     private int damagePoints;
     private String name;
     private String sound;
 
     public Scimitar(){
-        this.damagePoints = 3;
-        this.name = "Scimitar";
-        this.sound = "Clang";
+        super(3, "Scimitar", "Clang");
     }
 
-    public int attack() {
-        return this.damagePoints;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getSound() {
-        return sound;
-    }
 }

@@ -2,27 +2,15 @@ package weapons;
 
 import behaviours.IWeapon;
 
-public class Bow implements IWeapon {
+public class Bow extends Weapon implements IWeapon {
 
     private int damagePoints;
     private String name;
     private String sound;
 
     public Bow(){
-        this.damagePoints = 20;
-        this.name = "Galadhrim";
-        this.sound = "Twang";
+        super(20, "Galadhrim", "Twang");
     }
 
-    public int attack() {
-        return this.damagePoints;
-    }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getSound() {
-        return sound;
-    }
 }
