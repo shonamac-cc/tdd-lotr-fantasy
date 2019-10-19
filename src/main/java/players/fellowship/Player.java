@@ -16,7 +16,19 @@ public abstract class Player {
         this.weapons = weapons;
     }
 
-//    every player is going to have a weapon or weapons
+    public String getName() {
+        return name;
+    }
+
+    public int getHPoints() {
+        return hPoints;
+    }
+
+    public void setHPoints(int hPoints) {
+        this.hPoints = hPoints;
+    }
+
+    //    every player is going to have a weapon or weapons
     public ArrayList<IWeapon> getWeapons(){
         return weapons;
     }

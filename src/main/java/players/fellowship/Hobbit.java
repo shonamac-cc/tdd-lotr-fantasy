@@ -3,6 +3,7 @@ package players.fellowship;
 
 import behaviours.IWeapon;
 import weapons.Sword;
+import weapons.Weapon;
 
 import java.util.ArrayList;
 
@@ -17,5 +18,10 @@ public class Hobbit extends Player{
 
     public void addWeapons(){
         getWeapons().add(sword);
+    }
+
+    public int damage(Weapon weapon){
+        setHPoints(getHPoints() - weapon.attack());
+        return getHPoints();
     }
 }
