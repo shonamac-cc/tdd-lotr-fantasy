@@ -11,10 +11,18 @@ public class Axe implements IWeapon {
     public Axe(){
         this.damagePoints = 10;
         this.name = "Gimli's axe";
-        this.sound = "chop";
+        this.sound = "Chop";
     }
 
     public int attack() {
         return this.damagePoints;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSound() {
+        return sound;
     }
 }

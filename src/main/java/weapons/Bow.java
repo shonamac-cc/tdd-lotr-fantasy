@@ -11,10 +11,18 @@ public class Bow implements IWeapon {
     public Bow(){
         this.damagePoints = 20;
         this.name = "Galadhrim";
-        this.sound = "twang";
+        this.sound = "Twang";
     }
 
     public int attack() {
         return this.damagePoints;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSound() {
+        return sound;
     }
 }
