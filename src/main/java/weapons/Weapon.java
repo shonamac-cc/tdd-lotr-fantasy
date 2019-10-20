@@ -22,11 +22,7 @@ public class Weapon implements IWeapon {
         return sound;
     }
 
-    public int attack() {
+    public int attackPoints() {
         return this.damagePoints;
-    }
-
-    public int damage(Weapon weapon) {
-        return 0;
     }
 }

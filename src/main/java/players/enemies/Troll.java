@@ -1,25 +1,14 @@
 package players.enemies;
 
-import behaviours.IWeapon;
-import weapons.Club;
-import weapons.Weapon;
 
-import java.util.ArrayList;
+import weapons.Scimitar;
+
 
 public class Troll extends Enemy {
 
-    private Club club = new Club();
 
     public Troll() {
-        super("Bert", 100, new ArrayList<IWeapon>());
+        super("Bert", 100, new Scimitar());
     }
 
-    public void addWeapons() {
-        getWeapons().add(club);
-    }
-
-    public int damage(Weapon weapon) {
-        setHPoints(getHPoints() - weapon.attack());
-        return getHPoints();
-    }
 }

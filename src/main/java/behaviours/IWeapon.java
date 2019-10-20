@@ -1,8 +1,8 @@
 package behaviours;
 
-import weapons.Weapon;
 
 public interface IWeapon {
-    int attack();
-    int damage(Weapon weapon);
+    int attackPoints();
+    String getName();
+    String getSound();
 }

@@ -1,19 +1,26 @@
 package players.enemies;
 
+import behaviours.IEnemy;
+import behaviours.IFellowship;
 import behaviours.IWeapon;
 
 import java.util.ArrayList;
 
-public abstract class Enemy {
+public abstract class Enemy implements IEnemy {
 
     private String name;
     private int hPoints;
-    private ArrayList<IWeapon> weapons;
+    private IWeapon weapon;
 
-    public Enemy(String name, int hPoints, ArrayList<IWeapon> weapons){
+    public Enemy(String name, int hPoints, IWeapon weapon){
         this.name = name;
         this.hPoints = hPoints;
-        this.weapons = weapons;
+        this.weapon = weapon;
+    }
+
+    public void takeDamage(int damagePoints) {
+        int newHPoints =  getHPoints() - damagePoints;
+        setHPoints(newHPoints);
     }
 
     public String getName() {
@@ -21,18 +28,21 @@ public abstract class Enemy {
     }
 
     public int getHPoints() {
-        return hPoints;
+        return hPoints > 0 ? hPoints : 0;
     }
 
-    public void setHPoints(int hPoints) {
-        this.hPoints = hPoints;
+    public void setHPoints(int newHPoints) {
+        this.hPoints = newHPoints;
     }
 
-//    every enemy is going to have a weapon or weapons
-    public ArrayList<IWeapon> getWeapons() {
-        return weapons;
+    public String attack(IFellowship fellowship){
+        int damagePoints = this.weapon.attackPoints();
+        fellowship.takeDamage(damagePoints);
+        String attackMsg = weapon.getSound() + ", " + getName() + " has Attacked " + fellowship.getName() + " with " + weapon.getName() +
+                ". " + fellowship.getName() + " lost " +
+                weapon.attackPoints() + " health points, " + fellowship.getName() + "'s remaining health points is " + fellowship.getHPoints();
+        return attackMsg;
     }
 
-    //    create abstract method to add weapons so each child inherits
-    public abstract void addWeapons();
+
 }
