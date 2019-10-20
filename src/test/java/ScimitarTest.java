@@ -15,7 +15,7 @@ public class ScimitarTest {
 
     @Test
     public void hasDamagePoints(){
-        assertEquals(3, scimitar.attack());
+        assertEquals(3, scimitar.attackPoints());
     }
 
     @Test

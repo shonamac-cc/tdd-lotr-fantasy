@@ -15,7 +15,7 @@ public class BowTest {
 
     @Test
     public void hasDamagePoints(){
-        assertEquals(20, bow.attack());
+        assertEquals(20, bow.attackPoints());
     }
 
     @Test

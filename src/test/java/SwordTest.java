@@ -15,7 +15,7 @@ public class SwordTest {
 
     @Test
     public void hasDamagePoints(){
-        assertEquals(15, sword.attack());
+        assertEquals(15, sword.attackPoints());
     }
 
     @Test

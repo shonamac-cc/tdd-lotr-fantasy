@@ -15,7 +15,7 @@ public class SpearTest {
 
     @Test
     public void hasDamagePoints(){
-        assertEquals(11, spear.attack());
+        assertEquals(11, spear.attackPoints());
     }
 
     @Test

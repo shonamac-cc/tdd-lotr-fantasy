@@ -28,7 +28,7 @@ public class HobbitTest {
 
     @Test
     public void canDamageEnemy(){
-        orc.damage(sword);
+        orc.takeDamage(15);
         assertEquals(85, orc.getHPoints());
     }
 
